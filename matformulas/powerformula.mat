@@ -1,0 +1,13 @@
+v = input('Enter voltage (V): ');
+i = input('Enter current (I): ');
+cosphi = input('Enter power factor (cosine of angle between voltage and current): ');
+
+P = v * i * cosphi;
+S = v * i;
+sinphi = sqrt(1 - cosphi^2);
+Q = v * i * sinphi;
+
+disp(['Active power P = ', num2str(P), ' W']);
+disp(['Apparent power S = ', num2str(S), ' VA']);
+disp(['Reactive power Q = ', num2str(Q), ' VAR']);
+
